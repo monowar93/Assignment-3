@@ -4,7 +4,7 @@ import {
   getBorrowedBooksSummary,
 } from "../controllers/borrowController.js";
 const router = express.Router();
-
+//get request
 router.post("/api/borrow", createBorrow);
 
 router.get("/api/borrow", getBorrowedBooksSummary);
