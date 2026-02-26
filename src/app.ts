@@ -6,7 +6,7 @@ import cors from "cors";
 // Route Imports
 import { errorMiddleware } from "./utils/Error.js";
 import bookRouter from "./router/bookRouter.js";
-import borrowRouter from "./router/borrowRouter.js";
+import borrowRouter from "./router/borrowRouter.js"; 
 
 // Connect to MongoDB
 connectDB();
@@ -20,7 +20,7 @@ app.use(cors());
 app.use("/", bookRouter);
 app.use("/", borrowRouter);
 
-// Home route
+// Home route 
 app.get("/", (req, res) => {
   res.send(
     "Hello, PH Instructor you are in right place ❤️ !!! API Working with https://assignment-3-three-lilac.vercel.app",
@@ -32,7 +32,7 @@ app.use((req, res) => {
   res.status(400).send("Bad Request Dear PH Instructor 😂");
 });
 
-// Error handling middleware its separate file for all errors and better management
+// Error handling middleware its separate file for all errors and better management.
 app.use(errorMiddleware);
 
 export default app;
